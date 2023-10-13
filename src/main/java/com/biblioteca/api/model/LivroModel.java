@@ -2,26 +2,16 @@ package com.biblioteca.api.model;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.util.UUID;
 
 @Entity
 @Table(name = "Livros")
-public class LivroModel extends  PublicacaoModel{
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID livro_id;
+public class LivroModel extends  PublicacaoModel implements Serializable {
     @Column(nullable = true)
     private String ISBN;
     @Column(nullable = true)
     private String autor;
-
-    public UUID getLivro_id() {
-        return livro_id;
-    }
-
-    public void setLivro_id(UUID livro_id) {
-        this.livro_id = livro_id;
-    }
 
     public String getISBN() {
         return ISBN;
