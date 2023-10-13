@@ -8,7 +8,7 @@ import java.util.UUID;
 @Inheritance(strategy = InheritanceType.JOINED)
 public class PublicacaoModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID publicacao_id;
     @Column(nullable = true)
     private String catalogacao;
